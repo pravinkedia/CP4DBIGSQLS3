@@ -82,13 +82,18 @@
 
 ### Create table with delimited format
 
-CREATE HADOOP TABLE t (
-    i INT,
-    s VARCHAR(10)
-  )
-  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
-  STORED AS TEXTFILE;
-
+       CREATE HADOOP TABLE CP4D.TEST (
+             id INT,
+             name VARCHAR(10)
+        )
+        LOCATION 's3a://icos-cp4d-std/CP4D/TEST'
+        ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+        STORED AS TEXTFILE;
+ 
+ ### Insert data from existing table
+  
+     insert into cp4d.TEST SELECT * FROM CP4D.BOBCATDEMOPK3_PARQUET;
+  
 ### Create Table based on existing data file 
 
     [bigsql@head /]$ db2 -tvf /tmp/2.sql 
