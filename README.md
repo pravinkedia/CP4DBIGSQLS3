@@ -92,7 +92,7 @@
 
 ### Check the files on S3 for the tables created above
 
-    [bigsql@head /]$ hadoop fs -ls 's3a://cp4d-big-sql-bucket/'
+    [bigsql@head /]$ hadoop fs -ls 's3a://icos-cp4d-std/'
     Found 5 items
     -rw-rw-rw-   1 bigsql bigsql          0 2021-01-22 10:08 s3a://icos-cp4d-std/aipdemoext3
     drwxrwxrwx   - bigsql bigsql          0 2021-01-22 19:12 s3a://icos-cp4d-std/aipdemoextpk1
