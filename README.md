@@ -113,3 +113,15 @@
     drwxrwxrwx   - bigsql bigsql          0 2021-01-22 19:12 s3a://icos-cp4d-std/country
     -rw-rw-rw-   1 bigsql bigsql         27 2021-01-22 09:41 s3a://icos-cp4d-std/file1.txt
     drwxrwxrwx   - bigsql bigsql          0 2021-01-22 19:12 s3a://icos-cp4d-std/staff
+
+### MANY MORE CREATE HADOOP TABLE FORMATS AND EXAMPLES
+
+https://www.ibm.com/docs/en/db2-big-sql/7.1?topic=statements-create-table-hadoop
+
+### LOAD HADOOP EXAMPLES FOR QUICK AND DIRTY ANALYSIS
+
+        CREATE EXTERNAL HADOOP TABLE CP4D.T1 (id INT, name VARCHAR(40))
+        LOCATION 's3a://icos-cp4d-std/CP4D/PRAVINTEST.csv'
+        ROW FORMAT DELIMITED  FIELDS TERMINATED BY ',' ;
+
+        select * from CP4D.T1;
