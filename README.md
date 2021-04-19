@@ -80,6 +80,15 @@
     [bigsql@head /]$ hadoop fs -cat 's3a://icos-cp4d-std/aipdemoextpk1/i_1611339623126_1891691504_20210122062108177_1.0'
     1pravin
 
+### Create table with delimited format
+
+CREATE HADOOP TABLE t (
+    i INT,
+    s VARCHAR(10)
+  )
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+  STORED AS TEXTFILE;
+
 ### Create Table based on existing data file 
 
     [bigsql@head /]$ db2 -tvf /tmp/2.sql 
