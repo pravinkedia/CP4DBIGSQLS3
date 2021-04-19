@@ -126,10 +126,4 @@ https://www.ibm.com/docs/en/db2-big-sql/7.1?topic=statements-create-table-hadoop
 
         select * from CP4D.T1;
 
-### LOAD HADOOP JSON Example
 
-        CREATE EXTERNAL HADOOP TABLE CP4D.GOOGLEREVIEWJSON ( JSONDATA VARCHAR(4096) )
-        LOCATION 's3a://icos-cp4d-std/CP4D/GoogleReviews_sample.json'
-        ROW FORMAT DELIMITED  FIELDS TERMINATED BY ',' ;
-    
-        select * from CP4D.GOOGLEREVIEWJSON;
