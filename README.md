@@ -57,7 +57,7 @@
     Found 1 items
     -rw-rw-rw-   1 bigsql bigsql          9 2021-01-22 18:21 s3a://icos-cp4d-std/aipdemoextpk1/i_1611339623126_1891691504_20210122062108177_1.0
 
-### Get the File in S3 with following Contentes and Load in S3
+### Get the File in S3 with following Contents and Load in S3
 
      [bigsql@head /]$ hadoop fs -cat 's3a://icos-cp4d-std/file1.txt'
      1,rahul
